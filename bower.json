@@ -1,0 +1,23 @@
+{
+  "name": "patch-layout",
+  "homepage": "https://github.com/TrySound/patch-layout",
+  "authors": [
+    "Bogdan Chadkin <trysound@yandex.ru>"
+  ],
+  "description": "Bootstrap like Layout System",
+  "main": "dist/patch-layout.css",
+  "keywords": [
+    "grid",
+    "css",
+    "layout",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

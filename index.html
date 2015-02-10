@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+	<link rel="stylesheet" href="dist/patch-layout.css">
+
+	<style>
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+
+.ribbon {
+	background-color: #1e995b;
+	overflow: hidden;
+	white-space: nowrap;
+	position: absolute;
+	right: -50px;
+	top: 40px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+}
+
+@-webkit-keyframes pulse {
+	50% {box-shadow: 0 0 10px rgba(0, 0, 0, .2);}
+}
+
+@keyframes pulse {
+	50% {box-shadow: 0 0 10px rgba(0, 0, 0, .2);}
+}
+
+.ribbon:hover {
+	-webkit-animation: pulse .5s infinite;
+	animation: pulse .5s infinite;
+}
+
+.ribbon a {
+	border: 1px solid #ffe5f2;
+	color: #ffe5f2;
+	display: block;
+	font: bold .875em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: 1px 0;
+	padding: 10px 50px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.panel {
+	font-size: 1.25em;
+	color: #fff;
+	padding: 20px;
+	background: #063;
+	margin-bottom: 20px;
+}
+
+	</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+	<div class="ribbon">
+		<a href="https://github.com/TrySound/patch-layout" target="_blank">Star me on GitHub</a>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel">col-sm-12</div>
+			</div>
+			<div class="col-sm-1">
+				<div class="panel">col-sm-1</div>
+			</div>
+			<div class="col-sm-11">
+				<div class="panel">col-sm-11</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="panel">col-sm-2</div>
+			</div>
+			<div class="col-sm-10">
+				<div class="panel">col-sm-10</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="panel">col-sm-3</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="panel">col-sm-9</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="panel">col-sm-4</div>
+			</div>
+			<div class="col-sm-8">
+				<div class="panel">col-sm-8</div>
+			</div>
+			<div class="col-sm-5">
+				<div class="panel">col-sm-5</div>
+			</div>
+			<div class="col-sm-7">
+				<div class="panel">col-sm-7</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="panel">col-sm-6</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="panel">col-sm-6</div>
+			</div>
+			<div class="col-sm-7">
+				<div class="panel">col-sm-7</div>
+			</div>
+			<div class="col-sm-5">
+				<div class="panel">col-sm-5</div>
+			</div>
+			<div class="col-sm-8">
+				<div class="panel">col-sm-8</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="panel">col-sm-4</div>
+			</div>
+			<div class="col-sm-9">
+				<div class="panel">col-sm-9</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="panel">col-sm-3</div>
+			</div>
+			<div class="col-sm-10">
+				<div class="panel">col-sm-10</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="panel">col-sm-2</div>
+			</div>
+			<div class="col-sm-11">
+				<div class="panel">col-sm-11</div>
+			</div>
+			<div class="col-sm-1">
+				<div class="panel">col-sm-1</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="panel">col-sm-12</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+</html>
