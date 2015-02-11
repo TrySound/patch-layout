@@ -1,6 +1,6 @@
 {
   "name": "patch-layout",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bootstrap like Layout System",
   "main": "gulpfile.js",
   "scripts": {
@@ -29,10 +29,10 @@
     "gulp-header": "^1.2.2",
     "gulp-postcss": "^4.0.3",
     "gulp-rename": "^1.2.0",
+    "postcss": "^4.0.3",
     "postcss-calc": "^4.0.0",
     "postcss-custom-properties": "^3.0.1",
     "postcss-mixins": "^0.1.1",
-    "postcss-nested": "^0.2.1",
-    "rename": "^0.2.3"
+    "postcss-nested": "^0.2.1"
   }
 }

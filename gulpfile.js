@@ -17,8 +17,10 @@ gulp.task('default', function () {
 	var pkg = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
 	return gulp.src('src/' + pkg.name + '.css')
 		.pipe(cssimport())
-		.pipe(postcss([
-			require('postcss-mixins')(),
+		.pipe(postcss([,
+			require('postcss-mixins')({
+				mixinsDir: __dirname + '/src/mixins'
+			}),
 			require('postcss-custom-properties')(),
 			require('postcss-nested'),
 			require('postcss-calc')()
