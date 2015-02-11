@@ -1,6 +1,11 @@
 # patch-layout
 Bootstrap like Layout System
 
+##Why
+
+- Columns use inline document flow
+- `.push-xs-n, .pull-sm-n, .offset-md-n` for shorter markup
+
 ##Grid
 
 - `.container, .container-fluid` - block container
