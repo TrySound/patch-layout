@@ -17,6 +17,21 @@ Bootstrap like Layout System
 - `.visible-xs, .visible-sm, .visible-md, .visible-lg` - show
 - `.hidden-xs, .hidden-sm, .hidden-md, .hidden-lg` - collapse
 
+##Aligning
+
+- `.center-block`
+- `.pull-left`
+- `.pull-right`
+
+##Clearfix
+- `.clearfix`
+
+##Responsive Media
+
+- `.embed-responsive` - wrapper for iframe, embed, object, video and `.embed-responsive-item`
+- `.embed-responsive-16by9, .embed-responsive-4by3` - modificators for `.embed-responsive`
+- `.img-responsive`
+
 ##License
 
 [The MIT License (MIT)](LICENSE)
