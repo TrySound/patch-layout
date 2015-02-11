@@ -10,6 +10,13 @@ Bootstrap like Layout System
 - `.push-xs-n, .push-sm-n, .push-md-n, .push-lg-n` - move to left
 - `.pull-xs-n, .pull-sm-n, .pull-md-n, .pull-lg-n` - move to right
 
+##Visibility
+
+- `.hide, .hidden, .show` - collapse and show
+- `.invisible` - hidden but not collapsed,
+- `.visible-xs, .visible-sm, .visible-md, .visible-lg` - show
+- `.hidden-xs, .hidden-sm, .hidden-md, .hidden-lg` - collapse
+
 ##License
 
 [The MIT License (MIT)](LICENSE)
