@@ -3,6 +3,7 @@ Bootstrap like Layout System
 
 ##Why
 
+- Columns can be aligned vertically!
 - Columns use inline document flow
 - `.push-xs-n, .pull-sm-n, .offset-md-n` for shorter markup
 
@@ -22,10 +23,10 @@ Bootstrap like Layout System
 - `.visible-xs, .visible-sm, .visible-md, .visible-lg` - show
 - `.hidden-xs, .hidden-sm, .hidden-md, .hidden-lg` - collapse
 
-##Aligning
+##Flow Align
 
-- `.center-block`
 - `.pull-left`
+- `.pull-center`
 - `.pull-right`
 
 ##Clearfix
