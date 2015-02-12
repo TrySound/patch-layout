@@ -1,5 +1,5 @@
 /*!
- * patch-layout 0.0.3
+ * patch-layout 0.1.0
  * Bootstrap like Layout System
  * https://github.com/TrySound/patch-layout
  * 
@@ -7,12 +7,29 @@
  * Copyright (c) 2015, Bogdan Chadkin <trysound@yandex.ru>
  */
 
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: ''
+}
+
+.clearfix:after {
+	clear: both
+}
+
 .embed-responsive {
 	position: relative;
 	display: block;
 	height: 0;
 	padding: 0;
 	overflow: hidden
+}
+
+.embed-responsive.embed-responsive-16by9 {
+	padding-bottom: 56.25%;
+}
+
+.embed-responsive.embed-responsive-4by3 {
+	padding-bottom: 75%;
 }
 
 .embed-responsive .embed-responsive-item, .embed-responsive iframe, .embed-responsive embed, .embed-responsive object, .embed-responsive video {
@@ -25,130 +42,10 @@
 	border: 0;
 }
 
-.embed-responsive.embed-responsive-16by9 {
-	padding-bottom: 56.25%;
-}
-
-.embed-responsive.embed-responsive-4by3 {
-	padding-bottom: 75%;
-}
-
 .img-responsive {
 	display: block;
 	max-width: 100%;
 	height: auto;
-}
-
-.hide,
-.hidden {
-	display: none !important;
-}
-.invisible {
-	visibility: hidden;
-}
-.show {
-	display: block !important;
-}
-
-.visible-xs, .visible-sm, .visible-md, .visible-lg {
-	display: none !important;
-}
-
-@media (max-width: 767px) {
-	.visible-xs {
-		display: block !important
-	}
-	table.visible-xs {
-		display: table !important
-	}
-	tr.visible-xs {
-		display: table-row !important
-	}
-	th.visible-xs,
-	td.visible-xs {
-		display: table-cell !important
-	}
-	.hidden-xs {
-		display: none !important
-	}
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-	.visible-sm {
-		display: block !important
-	}
-	table.visible-sm {
-		display: table !important
-	}
-	tr.visible-sm {
-		display: table-row !important
-	}
-	th.visible-sm,
-	td.visible-sm {
-		display: table-cell !important
-	}
-	.hidden-sm {
-		display: none !important
-	}
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-	.visible-md {
-		display: block !important
-	}
-	table.visible-md {
-		display: table !important
-	}
-	tr.visible-md {
-		display: table-row !important
-	}
-	th.visible-md,
-	td.visible-md {
-		display: table-cell !important
-	}
-	.hidden-md {
-		display: none !important
-	}
-}
-
-@media (min-width: 1200px) {
-	.visible-lg {
-		display: block !important
-	}
-	table.visible-lg {
-		display: table !important
-	}
-	tr.visible-lg {
-		display: table-row !important
-	}
-	th.visible-lg,
-	td.visible-lg {
-		display: table-cell !important
-	}
-	.hidden-lg {
-		display: none !important
-	}
-}
-
-.center-block {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-}
-.pull-right {
-	float: right !important;
-}
-.pull-left {
-	float: left !important;
-}
-
-.clearfix:before, .clearfix:after {
-	display: table;
-	content: ''
-}
-
-.clearfix:after {
-	clear: both
 }
 
 @-ms-viewport {
@@ -1017,6 +914,111 @@
 
 	.offset-lg-0 {
 		margin-left: 0
+	}
+}
+
+
+.pull-center {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.pull-right {
+	float: right !important;
+}
+.pull-left {
+	float: left !important;
+}
+
+
+.hide,
+.hidden {
+	display: none !important;
+}
+.invisible {
+	visibility: hidden;
+}
+.show {
+	display: block !important;
+}
+
+.visible-xs, .visible-sm, .visible-md, .visible-lg {
+	display: none !important;
+}
+
+@media (max-width: 767px) {
+	.visible-xs {
+		display: block !important
+	}
+	table.visible-xs {
+		display: table !important
+	}
+	tr.visible-xs {
+		display: table-row !important
+	}
+	th.visible-xs,
+	td.visible-xs {
+		display: table-cell !important
+	}
+	.hidden-xs {
+		display: none !important
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.visible-sm {
+		display: block !important
+	}
+	table.visible-sm {
+		display: table !important
+	}
+	tr.visible-sm {
+		display: table-row !important
+	}
+	th.visible-sm,
+	td.visible-sm {
+		display: table-cell !important
+	}
+	.hidden-sm {
+		display: none !important
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.visible-md {
+		display: block !important
+	}
+	table.visible-md {
+		display: table !important
+	}
+	tr.visible-md {
+		display: table-row !important
+	}
+	th.visible-md,
+	td.visible-md {
+		display: table-cell !important
+	}
+	.hidden-md {
+		display: none !important
+	}
+}
+
+@media (min-width: 1200px) {
+	.visible-lg {
+		display: block !important
+	}
+	table.visible-lg {
+		display: table !important
+	}
+	tr.visible-lg {
+		display: table-row !important
+	}
+	th.visible-lg,
+	td.visible-lg {
+		display: table-cell !important
+	}
+	.hidden-lg {
+		display: none !important
 	}
 }
 

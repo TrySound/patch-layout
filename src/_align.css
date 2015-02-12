@@ -1,4 +1,4 @@
-.center-block {
+.pull-center {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
@@ -9,3 +9,4 @@
 .pull-left {
 	float: left !important;
 }
+

@@ -27,14 +27,13 @@
 	}
 }
 
-
 @define-mixin grid $size {
 	.col-$(size) {
-		@mixin grid-item width 12;
+		@mixin grid-item width;
 	}
 
 	.pull-$(size) {
-		@mixin grid-item right 12;
+		@mixin grid-item right;
 
 		&-0 {
 			right: auto;
@@ -42,7 +41,7 @@
 	}
 
 	.push-$(size) {
-		@mixin grid-item left 12;
+		@mixin grid-item left;
 
 		&-0 {
 			left: auto;
@@ -50,7 +49,7 @@
 	}
 
 	.offset-$(size) {
-		@mixin grid-item margin-left 12;
+		@mixin grid-item margin-left;
 
 		&-0 {
 			margin-left: 0;
@@ -83,3 +82,4 @@
 
 	@mixin grid lg;
 }
+
