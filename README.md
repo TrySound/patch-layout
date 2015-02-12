@@ -7,6 +7,13 @@ Bootstrap like Layout System
 - Columns use inline document flow
 - `.push-xs-n, .pull-sm-n, .offset-md-n` for shorter markup
 
+##Media Queries
+
+- **xs** - to 767px
+- **sm** - 768px to 991px
+- **md** - 992px to 1199px
+- **lg** - 1200px and greater
+
 ##Grid
 
 - `.container, .container-fluid` - block container
