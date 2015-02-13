@@ -22,19 +22,12 @@ Bootstrap like Layout System
 
 ###Columns
 
-`n` is 1-12 column width
+`n` is 1-12 column width/offset indent
 
-- `.col-xs-n`
-- `.col-sm-n`
-- `.col-md-n`
-- `.col-lg-n`
-
-###Column indent
-
-- `.offset-xs-n`
-- `.offset-sm-n`
-- `.offset-md-n`
-- `.offset-lg-n`
+- `.col-xs-n` - `.offset-xs-n`
+- `.col-sm-n` - `.offset-sm-n`
+- `.col-md-n` - `.offset-md-n`
+- `.col-lg-n` - `.offset-lg-n`
 
 ###Relative move
 
