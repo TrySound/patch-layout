@@ -16,21 +16,69 @@ Bootstrap like Layout System
 
 ##Grid
 
-- `.container, .container-fluid` - block container
-- `.row` - columns container
-- `.col-xs-n, .col-sm-n, .col-md-n, .col-lg-n` - Columns, where `n` is 1-12 column width
-- `.offset-xs-n, .offset-sm-n, .offset-md-n, .offset-lg-n` - column indent
-- `.push-xs-n, .push-sm-n, .push-md-n, .push-lg-n` - move to left
-- `.pull-xs-n, .pull-sm-n, .pull-md-n, .pull-lg-n` - move to right
+- `.container`
+- `.container-fluid`
+- `.row`
+
+###Columns
+
+`n` is 1-12 column width
+
+- `.col-xs-n`
+- `.col-sm-n`
+- `.col-md-n`
+- `.col-lg-n`
+
+###Column indent
+
+- `.offset-xs-n`
+- `.offset-sm-n`
+- `.offset-md-n`
+- `.offset-lg-n`
+
+###Relative move
+
+####To left
+
+- `.push-xs-n`
+- `.push-sm-n`
+- `.push-md-n`
+- `.push-lg-n` - 
+
+####To right
+
+- `.pull-xs-n`
+- `.pull-sm-n`
+- `.pull-md-n`
+- `.pull-lg-n`
 
 ##Visibility
 
-- `.visible, .hidden` - show and collapse
-- `.invisible` - hidden but not collapsed,
-- `.visible-xs, .visible-sm, .visible-md, .visible-lg` - show by screen width
-- `.hidden-xs, .hidden-sm, .hidden-md, .hidden-lg` - collapse by screen width
-- `.visible-xs-inline, .visible-sm-inline, .visible-md-inline, .visible-lg-inline` - show by screen width for inline-block elements
-- `.hidden-xs-inline, .hidden-sm-inline, .hidden-md-inline, .hidden-lg-inline` - collapse by screen width for inline-block elements
+- `.visible, .visible-inline` - show
+- `.hidden` - collapse
+- `.invisible` - hidden but not collapsed
+
+###Media queries
+
+- `.visible-xs`
+- `.visible-sm`
+- `.visible-md`
+- `.visible-lg`
+- `.hidden-xs`
+- `.hidden-sm`
+- `.hidden-md`
+- `.hidden-lg`
+
+###Inline-block
+
+- `.visible-xs-inline`
+- `.visible-sm-inline`
+- `.visible-md-inline`
+- `.visible-lg-inline`
+- `.hidden-xs-inline`
+- `.hidden-sm-inline`
+- `.hidden-md-inline`
+- `.hidden-lg-inline`
 
 ##Flow Align
 
