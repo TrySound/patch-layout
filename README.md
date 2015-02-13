@@ -75,7 +75,7 @@ Could be used with columns
 
 - `.embed-responsive` - wrapper. By default 16by9
 - `.embed-responsive-4by3` - modificator for `.embed-responsive`
-- iframe, embed, object, video and `.embed-responsive-item` - child
+- `iframe, embed, object, video` and `.embed-responsive-item` - child
 - `.img-responsive`
 
 ##License
