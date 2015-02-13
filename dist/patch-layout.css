@@ -1,5 +1,5 @@
 /*!
- * patch-layout 0.1.1
+ * patch-layout 0.1.2
  * Bootstrap like Layout System
  * https://github.com/TrySound/patch-layout
  * 
@@ -21,8 +21,17 @@
 	display: block;
 	height: 0;
 	padding: 0;
-	overflow: hidden;
-	padding-bottom: 56.25%
+	overflow: hidden
+}
+
+.embed-responsive:before {
+	content: '';
+	display: block;
+	padding-bottom: 56.25%;
+}
+
+.embed-responsive-4by3:before {
+	padding-bottom: 75%;
 }
 
 .embed-responsive .embed-responsive-item, .embed-responsive iframe, .embed-responsive embed, .embed-responsive object, .embed-responsive video {
@@ -33,10 +42,6 @@
 	width: 100%;
 	height: 100%;
 	border: 0;
-}
-
-.embed-responsive-4by3 {
-	padding-bottom: 75%;
 }
 
 .img-responsive {
@@ -51,6 +56,7 @@
 
 .container,
 .container-fluid {
+	box-sizing: border-box;
 	padding: 0 .875rem;
 	margin: 0 auto;
 }
