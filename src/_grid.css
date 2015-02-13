@@ -5,6 +5,7 @@
 .container,
 .container-fluid {
 	@mixin clearfix;
+	box-sizing: border-box;
 	padding: 0 var(--gutter);
 	margin: 0 auto;
 }
