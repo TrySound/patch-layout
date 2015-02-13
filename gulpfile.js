@@ -33,3 +33,7 @@ gulp.task('default', function () {
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('dist'));
 });
+
+gulp.task('dev', ['default'], function () {
+	gulp.watch('src/**/*.css', ['default']);
+});

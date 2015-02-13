@@ -1,52 +1,72 @@
-.hide,
-.hidden {
-	display: none !important;
-}
-.invisible {
-	visibility: hidden;
-}
-.show {
+@define-mixin show {
 	display: block !important;
+
+	table& {
+		display: table !important;
+	}
+
+	tr& {
+		display: table-row !important;
+	}
+
+	th&, td& {
+		display: table-cell !important;
+	}
+}
+
+@define-mixin hide {
+	display: none !important;
 }
 
 .visible {
-	&-xs, &-sm, &-md, &-lg {
-		display: none !important;
+	@mixin show;
+}
+
+.hidden {
+	@mixin hide;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.visible-sm,
+.visible-md,
+.visible-lg {
+	@mixin hide;
+}
+
+.visible-xs {
+	@mixin show;
+}
+
+.hidden-xs {
+	@mixin hide;
+}
+
+@define-mixin visibility $prev $curr {
+	.visible-$(prev) {
+		@mixin hide;
+	}
+
+	.hidden-$(prev),
+	.visible-$(curr) {
+		@mixin show;
+	}
+
+	.hidden-$(curr) {
+		@mixin hide;
 	}
 }
 
-@define-mixin visible $size {
-	.visible-$(size) {
-		display: block !important;
-	}
-	table.visible-$(size) {
-		display: table !important;
-	}
-	tr.visible-$(size) {
-		display: table-row !important;
-	}
-	th.visible-$(size),
-	td.visible-$(size) {
-		display: table-cell !important;
-	}
-
-	.hidden-$(size) {
-		display: none !important;
-	}
+@media (min-width: 768px) {
+	@mixin visibility xs sm;
 }
 
-@media (max-width: 767px) {
-	@mixin visible xs;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-	@mixin visible sm;
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-	@mixin visible md;
+@media (min-width: 992px) {
+	@mixin visibility sm md;
 }
 
 @media (min-width: 1200px) {
-	@mixin visible lg;
+	@mixin visibility md lg;
 }

@@ -1,5 +1,5 @@
 /*!
- * patch-layout 0.1.3
+ * patch-layout 0.1.4
  * Bootstrap like Layout System
  * https://github.com/TrySound/patch-layout
  * 
@@ -932,53 +932,71 @@
 	float: left !important;
 }
 
-
-.hide,
-.hidden {
-	display: none !important;
-}
-.invisible {
-	visibility: hidden;
-}
-.show {
+.visible {
 	display: block !important;
 }
 
-.visible-xs, .visible-sm, .visible-md, .visible-lg {
+table.visible {
+	display: table !important
+}
+
+tr.visible {
+	display: table-row !important
+}
+
+th.visible, td.visible {
+	display: table-cell !important
+}
+
+.hidden {
 	display: none !important;
 }
 
-@media (max-width: 767px) {
-	.visible-xs {
-		display: block !important
-	}
-	table.visible-xs {
-		display: table !important
-	}
-	tr.visible-xs {
-		display: table-row !important
-	}
-	th.visible-xs,
-	td.visible-xs {
-		display: table-cell !important
-	}
-	.hidden-xs {
-		display: none !important
-	}
+.invisible {
+	visibility: hidden;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+.visible-sm,
+.visible-md,
+.visible-lg {
+	display: none !important;
+}
+
+.visible-xs {
+	display: block !important;
+}
+
+table.visible-xs {
+	display: table !important
+}
+
+tr.visible-xs {
+	display: table-row !important
+}
+
+th.visible-xs, td.visible-xs {
+	display: table-cell !important
+}
+
+.hidden-xs {
+	display: none !important;
+}
+
+@media (min-width: 768px) {
+	.visible-xs {
+		display: none !important
+	}
+	.hidden-xs,
 	.visible-sm {
 		display: block !important
 	}
-	table.visible-sm {
+	table.hidden-xs, table.visible-sm {
 		display: table !important
 	}
-	tr.visible-sm {
+	tr.hidden-xs, tr.visible-sm {
 		display: table-row !important
 	}
-	th.visible-sm,
-	td.visible-sm {
+	th.hidden-xs, td.hidden-xs, th.visible-sm, td.visible-sm {
 		display: table-cell !important
 	}
 	.hidden-sm {
@@ -986,18 +1004,21 @@
 	}
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) {
+	.visible-sm {
+		display: none !important
+	}
+	.hidden-sm,
 	.visible-md {
 		display: block !important
 	}
-	table.visible-md {
+	table.hidden-sm, table.visible-md {
 		display: table !important
 	}
-	tr.visible-md {
+	tr.hidden-sm, tr.visible-md {
 		display: table-row !important
 	}
-	th.visible-md,
-	td.visible-md {
+	th.hidden-sm, td.hidden-sm, th.visible-md, td.visible-md {
 		display: table-cell !important
 	}
 	.hidden-md {
@@ -1006,17 +1027,20 @@
 }
 
 @media (min-width: 1200px) {
+	.visible-md {
+		display: none !important
+	}
+	.hidden-md,
 	.visible-lg {
 		display: block !important
 	}
-	table.visible-lg {
+	table.hidden-md, table.visible-lg {
 		display: table !important
 	}
-	tr.visible-lg {
+	tr.hidden-md, tr.visible-lg {
 		display: table-row !important
 	}
-	th.visible-lg,
-	td.visible-lg {
+	th.hidden-md, td.hidden-md, th.visible-lg, td.visible-lg {
 		display: table-cell !important
 	}
 	.hidden-lg {

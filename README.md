@@ -25,10 +25,10 @@ Bootstrap like Layout System
 
 ##Visibility
 
-- `.hide, .hidden, .show` - collapse and show
+- `.visible, .hidden` - show and collapse
 - `.invisible` - hidden but not collapsed,
-- `.visible-xs, .visible-sm, .visible-md, .visible-lg` - show
-- `.hidden-xs, .hidden-sm, .hidden-md, .hidden-lg` - collapse
+- `.visible-xs, .visible-sm, .visible-md, .visible-lg` - show by screen width
+- `.hidden-xs, .hidden-sm, .hidden-md, .hidden-lg` - collapse by screen width
 
 ##Flow Align
 
