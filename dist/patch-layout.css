@@ -1,5 +1,5 @@
 /*!
- * patch-layout 0.1.2
+ * patch-layout 0.1.3
  * Bootstrap like Layout System
  * https://github.com/TrySound/patch-layout
  * 
@@ -19,7 +19,6 @@
 .embed-responsive {
 	position: relative;
 	display: block;
-	height: 0;
 	padding: 0;
 	overflow: hidden
 }
