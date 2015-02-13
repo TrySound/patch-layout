@@ -38,19 +38,12 @@ Bootstrap like Layout System
 
 ###Relative move
 
-####To left
+Push - to left, pull - to right
 
-- `.push-xs-n`
-- `.push-sm-n`
-- `.push-md-n`
-- `.push-lg-n` - 
-
-####To right
-
-- `.pull-xs-n`
-- `.pull-sm-n`
-- `.pull-md-n`
-- `.pull-lg-n`
+- `.push-xs-n` - `.pull-xs-n`
+- `.push-sm-n` - `.pull-sm-n`
+- `.push-md-n` - `.pull-md-n`
+- `.push-lg-n` - `.pull-lg-n`
 
 ##Visibility
 
@@ -60,25 +53,17 @@ Bootstrap like Layout System
 
 ###Media queries
 
-- `.visible-xs`
-- `.visible-sm`
-- `.visible-md`
-- `.visible-lg`
-- `.hidden-xs`
-- `.hidden-sm`
-- `.hidden-md`
-- `.hidden-lg`
+- `.visible-xs` - `.hidden-xs`
+- `.visible-sm` - `.hidden-sm`
+- `.visible-md` - `.hidden-md`
+- `.visible-lg` - `.hidden-lg`
 
 ###Inline-block
 
-- `.visible-xs-inline`
-- `.visible-sm-inline`
-- `.visible-md-inline`
-- `.visible-lg-inline`
-- `.hidden-xs-inline`
-- `.hidden-sm-inline`
-- `.hidden-md-inline`
-- `.hidden-lg-inline`
+- `.visible-xs-inline` - `.hidden-xs-inline`
+- `.visible-sm-inline` - `.hidden-sm-inline`
+- `.visible-md-inline` - `.hidden-md-inline`
+- `.visible-lg-inline` - `.hidden-lg-inline`
 
 ##Flow Align
 
