@@ -29,6 +29,8 @@ Bootstrap like Layout System
 - `.invisible` - hidden but not collapsed,
 - `.visible-xs, .visible-sm, .visible-md, .visible-lg` - show by screen width
 - `.hidden-xs, .hidden-sm, .hidden-md, .hidden-lg` - collapse by screen width
+- `.visible-xs-inline, .visible-sm-inline, .visible-md-inline, .visible-lg-inline` - show by screen width for inline-block elements
+- `.hidden-xs-inline, .hidden-sm-inline, .hidden-md-inline, .hidden-lg-inline` - collapse by screen width for inline-block elements
 
 ##Flow Align
 

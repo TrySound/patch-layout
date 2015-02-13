@@ -1,6 +1,10 @@
 @define-mixin show {
 	display: block !important;
 
+	&-inline {
+		display: inline-block !important;
+	}
+
 	table& {
 		display: table !important;
 	}
@@ -15,7 +19,9 @@
 }
 
 @define-mixin hide {
-	display: none !important;
+	&, &-inline {
+		display: none !important;
+	}
 }
 
 .visible {
@@ -49,8 +55,7 @@
 		@mixin hide;
 	}
 
-	.hidden-$(prev),
-	.visible-$(curr) {
+	.hidden-$(prev), .visible-$(curr) {
 		@mixin show;
 	}
 
