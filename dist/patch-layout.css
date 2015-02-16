@@ -53,6 +53,10 @@
 	width: device-width;
 }
 
+body {
+	margin: 0;
+}
+
 .container,
 .container-fluid {
 	box-sizing: border-box;
