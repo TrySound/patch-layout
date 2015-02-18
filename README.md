@@ -31,6 +31,11 @@ Bootstrap like Layout System
 - `.col-md-n` - `.offset-md-n`
 - `.col-lg-n` - `.offset-lg-n`
 
+By default columns vertically aligned to top. These classes will make you happy ;-)
+
+- `.col-middle`
+- `.col-bottom`
+
 ###Relative move
 
 Push - to left, pull - to right

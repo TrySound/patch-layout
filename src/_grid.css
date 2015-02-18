@@ -32,6 +32,15 @@ body {
 	}
 }
 
+.col {
+	&-middle {
+		vertical-align: middle;
+	}
+	&-bottom {
+		vertical-align: bottom;
+	}
+}
+
 @define-mixin grid $size {
 	.col-$(size) {
 		@mixin grid-item width;

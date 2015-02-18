@@ -1,5 +1,5 @@
 /*!
- * patch-layout 0.1.4
+ * patch-layout 0.1.5
  * Bootstrap like Layout System
  * https://github.com/TrySound/patch-layout
  * 
@@ -87,6 +87,14 @@ body {
 	box-sizing: border-box;
 	position: relative;
 	min-height: 1px;
+}
+
+.col-middle {
+	vertical-align: middle;
+}
+
+.col-bottom {
+	vertical-align: bottom;
 }
 
 .col-xs-12 {
