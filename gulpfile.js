@@ -23,6 +23,8 @@ gulp.task('default', function () {
 			}),
 			require('postcss-custom-properties')(),
 			require('postcss-nested'),
+			// Bootstrap non-conflict version
+			// require('pixrem')('18px', {replace: true }),
 			require('postcss-calc')()
 		]))
 		.pipe(header(template, pkg))
