@@ -31,6 +31,7 @@ body {
 	&-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12 {
 		display: inline-block;
 		vertical-align: top;
+		text-align: left;
 		font-size: 1rem;
 		width: 100%;
 		padding: 0 var(--gutter);
