@@ -19,6 +19,14 @@ body {
 	margin: 0 -var(--gutter);
 }
 
+.row-center {
+	text-align: center;
+}
+
+.row-right {
+	text-align: right;
+}
+
 .col-xs, .col-sm, .col-md, .col-lg {
 	&-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12 {
 		display: inline-block;
