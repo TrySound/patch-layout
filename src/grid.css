@@ -1,3 +1,7 @@
+:root {
+	--gutter: .875rem;
+}
+
 @-ms-viewport {
 	width: device-width;
 }

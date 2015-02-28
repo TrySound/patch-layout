@@ -1,9 +1,6 @@
 var gulp = require('gulp'),
-	cssimport = require('gulp-cssimport'),
-	fs = require('fs'),
-	postcss = require('gulp-postcss'),
-	header = require('gulp-header'),
-	rename = require('gulp-rename'),
+	$ = require('gulp-load-plugins')(),
+	p = require('postcss-load-plugins')(),
 	template = ['/*!',
 				' * <%= name %> <%= version %>',
 				' * <%= description %>',
@@ -14,25 +11,33 @@ var gulp = require('gulp'),
 				' */\n\n'].join('\n');
 
 gulp.task('default', function () {
-	var pkg = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
-	return gulp.src('src/' + pkg.name + '.css')
-		.pipe(cssimport())
-		.pipe(postcss([
-			require('postcss-mixins')({
+	var pkg = JSON.parse(require('fs').readFileSync('package.json', 'utf-8'));
+
+	return gulp.src([
+			"src/clearfix.css",
+			"src/responsive.css",
+			"src/grid.css",
+			"src/align.css",
+			"src/visibility.css"
+		])
+		.pipe($.concat(pkg.name + '.css'))
+		.pipe($.postcss([
+			p.mixins({
 				mixinsDir: __dirname + '/src/mixins'
 			}),
-			require('postcss-custom-properties')(),
-			require('postcss-nested'),
+			p.customProperties(),
+			p.nested,
 			// Bootstrap non-conflict version
-			// require('pixrem')('18px', {replace: true }),
-			require('postcss-calc')()
+			// p.pixrem('18px', {replace: true }),
+			p.calc(),
+			p.mqpacker()
 		]))
-		.pipe(header(template, pkg))
+		.pipe($.header(template, pkg))
 		.pipe(gulp.dest('dist'))
-		.pipe(postcss([
+		.pipe($.postcss([
 			require('csswring')()
 		]))
-		.pipe(rename({suffix: '.min'}))
+		.pipe($.rename({suffix: '.min'}))
 		.pipe(gulp.dest('dist'));
 });
 
