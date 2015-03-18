@@ -57,6 +57,10 @@ body {
 @define-mixin grid $size {
 	.col-$(size) {
 		@mixin grid-item width;
+
+		&-0 {
+			width: auto;
+		}
 	}
 
 	.pull-$(size) {
