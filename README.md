@@ -36,6 +36,11 @@ By default columns vertically aligned to top. These classes will make you happy 
 - `.col-middle`
 - `.col-bottom`
 
+Or positioned columns inside row with
+
+- `.row-center`
+- `.row-right`
+
 ###Relative move
 
 Push - to left, pull - to right
