@@ -1,6 +1,6 @@
 {
   "name": "patch-layout",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Bootstrap like Layout System",
   "main": "gulpfile.js",
   "scripts": {
