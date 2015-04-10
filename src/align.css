@@ -1,11 +1,60 @@
-.pull-center {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
+@define-mixin pull $size {
+	.pull$(size)left {
+		float: left;
+	}
+
+	.pull$(size)right {
+		float: right;
+	}
+
+	.pull$(size)center {
+		display: block;
+		float: none;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
-.pull-right {
-	float: right !important;
+
+@define-mixin text $size {
+	.text$(size)left {
+		text-align: left;
+	}
+
+	.text$(size)right {
+		text-align: right;
+	}
+
+	.text$(size)center {
+		text-align: center;
+	}
 }
-.pull-left {
-	float: left !important;
+
+@mixin pull -;
+@mixin pull -xs-;
+@mixin text -;
+@mixin text -xs-;
+
+.text{
+	&-middle {
+		vertical-align: middle;
+	}
+
+	&-bottom {
+		vertical-align: bottom;
+	}
+}
+
+@media (min-width: 768px) {
+	@mixin pull -sm-;
+	@mixin text -sm-;
+}
+
+@media (min-width: 992px) {
+	@mixin pull -md-;
+	@mixin text -md-;
+}
+
+@media (min-width: 1200px) {
+	@mixin pull -lg-;
+	@mixin text -lg-;
 }

@@ -23,14 +23,6 @@ body {
 	margin: 0 -var(--gutter);
 }
 
-.row-center {
-	text-align: center;
-}
-
-.row-right {
-	text-align: right;
-}
-
 .col-xs, .col-sm, .col-md, .col-lg {
 	&-0, &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12 {
 		display: inline-block;
@@ -42,15 +34,6 @@ body {
 		box-sizing: border-box;
 		position: relative;
 		min-height: 1px;
-	}
-}
-
-.col {
-	&-middle {
-		vertical-align: middle;
-	}
-	&-bottom {
-		vertical-align: bottom;
 	}
 }
 
@@ -76,14 +59,6 @@ body {
 
 		&-0 {
 			left: auto;
-		}
-	}
-
-	.offset-$(size) {
-		@mixin grid-item margin-left;
-
-		&-0 {
-			margin-left: 0;
 		}
 	}
 }

@@ -4,7 +4,7 @@
   "authors": [
     "Bogdan Chadkin <trysound@yandex.ru>"
   ],
-  "description": "Bootstrap like Layout System",
+  "description": "Flexible layout system",
   "main": "dist/patch-layout.css",
   "keywords": [
     "grid",

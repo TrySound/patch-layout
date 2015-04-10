@@ -19,27 +19,9 @@
 }
 
 @define-mixin hide {
-	&, &-inline {
+	& {
 		display: none !important;
 	}
-}
-
-.visible {
-	@mixin show;
-}
-
-.hidden {
-	@mixin hide;
-}
-
-.invisible {
-	visibility: hidden;
-}
-
-.visible-sm,
-.visible-md,
-.visible-lg {
-	@mixin hide;
 }
 
 .visible-xs {
@@ -50,28 +32,32 @@
 	@mixin hide;
 }
 
-@define-mixin visibility $prev $curr {
-	.visible-$(prev) {
-		@mixin hide;
-	}
-
-	.hidden-$(prev), .visible-$(curr) {
+@media (min-width: 768px) {
+	.visible-sm {
 		@mixin show;
 	}
 
-	.hidden-$(curr) {
+	.hidden-sm {
 		@mixin hide;
 	}
 }
 
-@media (min-width: 768px) {
-	@mixin visibility xs sm;
-}
-
 @media (min-width: 992px) {
-	@mixin visibility sm md;
+	.visible-md {
+		@mixin show;
+	}
+
+	.hidden-md {
+		@mixin hide;
+	}
 }
 
 @media (min-width: 1200px) {
-	@mixin visibility md lg;
+	.visible-lg {
+		@mixin show;
+	}
+
+	.hidden-lg {
+		@mixin hide;
+	}
 }

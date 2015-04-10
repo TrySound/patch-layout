@@ -1,7 +1,7 @@
 {
   "name": "patch-layout",
-  "version": "0.1.9",
-  "description": "Bootstrap like Layout System",
+  "version": "1.0.0",
+  "description": "Flexible layout system",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
