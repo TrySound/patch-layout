@@ -1,6 +1,6 @@
 {
   "name": "patch-layout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flexible layout system",
   "main": "gulpfile.js",
   "scripts": {

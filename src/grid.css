@@ -14,13 +14,16 @@ body {
 .container-fluid {
 	@mixin clearfix;
 	box-sizing: border-box;
-	padding: 0 var(--gutter);
-	margin: 0 auto;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .row {
 	font-size: 0;
-	margin: 0 -var(--gutter);
+	margin-left: -var(--gutter);
+	margin-right: -var(--gutter);
 }
 
 .col-xs, .col-sm, .col-md, .col-lg {
@@ -30,7 +33,8 @@ body {
 		text-align: left;
 		font-size: 1rem;
 		width: 100%;
-		padding: 0 var(--gutter);
+		padding-left: var(--gutter);
+		padding-right: var(--gutter);
 		box-sizing: border-box;
 		position: relative;
 		min-height: 1px;
