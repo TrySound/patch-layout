@@ -14,21 +14,22 @@ gulp.task('default', function () {
 	var pkg = JSON.parse(require('fs').readFileSync('package.json', 'utf-8'));
 
 	return gulp.src([
-			"src/clearfix.css",
-			"src/responsive.css",
-			"src/grid.css",
-			"src/align.css",
-			"src/visibility.css"
+			'src/params.css',
+			'src/responsive.css',
+			'src/container.css',
+			'src/grid.css',
+			'src/align.css',
+			'src/visibility.css'
 		])
 		.pipe($.concat(pkg.name + '.css'))
 		.pipe($.postcss([
-			p.mixins({
-				mixinsDir: __dirname + '/src/mixins'
-			}),
+			p.for(),
+			p.mixins(),
+			p.customMedia(),
 			p.customProperties(),
 			p.nested,
 			// Bootstrap non-conflict version
-			// p.pixrem('18px', {replace: true }),
+			// p.pixrem('16px', {replace: true }),
 			p.calc(),
 			p.mqpacker()
 		]))

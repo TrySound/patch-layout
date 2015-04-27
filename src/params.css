@@ -1,0 +1,18 @@
+:root {
+	--gutter: 1rem;
+}
+
+@define-mixin clearfix {
+	&:before,
+	&:after {
+		display: table;
+		content: '';
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@custom-media --sm (min-width: 768px);
+@custom-media --md (min-width: 992px);
+@custom-media --lg (min-width: 1200px);

@@ -1,7 +1,7 @@
 {
   "name": "patch-layout",
-  "version": "1.0.1",
-  "description": "Flexible layout system",
+  "version": "2.0.0",
+  "description": "Inline layout system",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +14,7 @@
     "bootstrap",
     "grid",
     "layout",
+    "inline",
     "css"
   ],
   "author": "Bogdan Chadkin <trysound@yandex.ru>",
@@ -34,7 +35,9 @@
     "pixrem": "^1.1.1",
     "postcss": "^4.0.3",
     "postcss-calc": "^4.0.0",
+    "postcss-custom-media": "^3.0.0",
     "postcss-custom-properties": "^3.0.1",
+    "postcss-for": "^0.2.0",
     "postcss-load-plugins": "^1.0.1",
     "postcss-mixins": "^0.1.1",
     "postcss-nested": "^0.2.1"

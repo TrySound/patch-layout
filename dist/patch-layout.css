@@ -1,20 +1,11 @@
 /*!
- * patch-layout 1.0.1
- * Flexible layout system
+ * patch-layout 2.0.0
+ * Inline layout system
  * https://github.com/TrySound/patch-layout
  * 
  * Released under the MIT license
  * Copyright (c) 2015, Bogdan Chadkin <trysound@yandex.ru>
  */
-
-.clearfix:before, .clearfix:after {
-	display: table;
-	content: ''
-}
-
-.clearfix:after {
-	clear: both
-}
 
 .embed-responsive {
 	position: relative;
@@ -60,8 +51,8 @@ body {
 .container,
 .container-fluid {
 	box-sizing: border-box;
-	padding-left: .875rem;
-	padding-right: .875rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -77,177 +68,193 @@ body {
 
 .row {
 	font-size: 0;
-	margin-left: -.875rem;
-	margin-right: -.875rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
 }
 
-.col-xs-0, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-0, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-0, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-0, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+.col-0, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-sm-0, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-0, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-0, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
 	display: inline-block;
 	vertical-align: top;
-	text-align: left;
 	font-size: 1rem;
 	width: 100%;
-	padding-left: .875rem;
-	padding-right: .875rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	box-sizing: border-box;
 	position: relative;
 	min-height: 1px;
 }
 
-.col-xs-12 {
+.col-12 {
 	width: 100%
 }
 
-.col-xs-11 {
+.col-11 {
 	width: 91.66667%
 }
 
-.col-xs-10 {
+.col-10 {
 	width: 83.33333%
 }
 
-.col-xs-9 {
+.col-9 {
 	width: 75%
 }
 
-.col-xs-8 {
+.col-8 {
 	width: 66.66667%
 }
 
-.col-xs-7 {
+.col-7 {
 	width: 58.33333%
 }
 
-.col-xs-6 {
+.col-6 {
 	width: 50%
 }
 
-.col-xs-5 {
+.col-5 {
 	width: 41.66667%
 }
 
-.col-xs-4 {
+.col-4 {
 	width: 33.33333%
 }
 
-.col-xs-3 {
+.col-3 {
 	width: 25%
 }
 
-.col-xs-2 {
+.col-2 {
 	width: 16.66667%
 }
 
-.col-xs-1 {
+.col-1 {
 	width: 8.33333%
 }
 
-.col-xs-0 {
+.col-0 {
 	width: auto
 }
 
-.pull-xs-12 {
+.pull-12 {
 	right: 100%
 }
 
-.pull-xs-11 {
+.pull-11 {
 	right: 91.66667%
 }
 
-.pull-xs-10 {
+.pull-10 {
 	right: 83.33333%
 }
 
-.pull-xs-9 {
+.pull-9 {
 	right: 75%
 }
 
-.pull-xs-8 {
+.pull-8 {
 	right: 66.66667%
 }
 
-.pull-xs-7 {
+.pull-7 {
 	right: 58.33333%
 }
 
-.pull-xs-6 {
+.pull-6 {
 	right: 50%
 }
 
-.pull-xs-5 {
+.pull-5 {
 	right: 41.66667%
 }
 
-.pull-xs-4 {
+.pull-4 {
 	right: 33.33333%
 }
 
-.pull-xs-3 {
+.pull-3 {
 	right: 25%
 }
 
-.pull-xs-2 {
+.pull-2 {
 	right: 16.66667%
 }
 
-.pull-xs-1 {
+.pull-1 {
 	right: 8.33333%
 }
 
-.pull-xs-0 {
-	right: auto
+.pull-0 {
+	right: 0
 }
 
-.push-xs-12 {
+.push-12 {
 	left: 100%
 }
 
-.push-xs-11 {
+.push-11 {
 	left: 91.66667%
 }
 
-.push-xs-10 {
+.push-10 {
 	left: 83.33333%
 }
 
-.push-xs-9 {
+.push-9 {
 	left: 75%
 }
 
-.push-xs-8 {
+.push-8 {
 	left: 66.66667%
 }
 
-.push-xs-7 {
+.push-7 {
 	left: 58.33333%
 }
 
-.push-xs-6 {
+.push-6 {
 	left: 50%
 }
 
-.push-xs-5 {
+.push-5 {
 	left: 41.66667%
 }
 
-.push-xs-4 {
+.push-4 {
 	left: 33.33333%
 }
 
-.push-xs-3 {
+.push-3 {
 	left: 25%
 }
 
-.push-xs-2 {
+.push-2 {
 	left: 16.66667%
 }
 
-.push-xs-1 {
+.push-1 {
 	left: 8.33333%
 }
 
-.push-xs-0 {
-	left: auto
+.push-0 {
+	left: 0
+}
+
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: ''
+}
+
+.clearfix:after {
+	clear: both
+}
+
+.text-middle {
+	vertical-align: middle;
+}
+
+.text-bottom {
+	vertical-align: bottom;
 }
 
 .pull-left {
@@ -264,18 +271,6 @@ body {
 	margin-right: auto;
 	margin-left: auto
 }
-.pull-xs-left {
-	float: left
-}
-.pull-xs-right {
-	float: right
-}
-.pull-xs-center {
-	display: block;
-	float: none;
-	margin-right: auto;
-	margin-left: auto
-}
 .text-left {
 	text-align: left
 }
@@ -285,45 +280,28 @@ body {
 .text-center {
 	text-align: center
 }
-.text-xs-left {
-	text-align: left
-}
-.text-xs-right {
-	text-align: right
-}
-.text-xs-center {
-	text-align: center
-}
 
-.text-middle {
-	vertical-align: middle;
-}
-
-.text-bottom {
-	vertical-align: bottom;
-}
-
-.visible-xs {
+.visible {
 	display: block !important;
 }
 
-.visible-xs-inline {
+.visible-inline {
 	display: inline-block !important
 }
 
-table.visible-xs {
+table.visible {
 	display: table !important
 }
 
-tr.visible-xs {
+tr.visible {
 	display: table-row !important
 }
 
-th.visible-xs, td.visible-xs {
+th.visible, td.visible {
 	display: table-cell !important
 }
 
-.hidden-xs {
+.hidden {
 	display: none !important
 }
 
@@ -434,7 +412,7 @@ th.visible-xs, td.visible-xs {
 	}
 
 	.pull-sm-0 {
-		right: auto
+		right: 0
 	}
 
 	.push-sm-12 {
@@ -486,7 +464,7 @@ th.visible-xs, td.visible-xs {
 	}
 
 	.push-sm-0 {
-		left: auto
+		left: 0
 	}
 
 	.pull-sm-left {
@@ -648,7 +626,7 @@ th.visible-xs, td.visible-xs {
 	}
 
 	.pull-md-0 {
-		right: auto
+		right: 0
 	}
 
 	.push-md-12 {
@@ -700,7 +678,7 @@ th.visible-xs, td.visible-xs {
 	}
 
 	.push-md-0 {
-		left: auto
+		left: 0
 	}
 
 	.pull-md-left {
@@ -862,7 +840,7 @@ th.visible-xs, td.visible-xs {
 	}
 
 	.pull-lg-0 {
-		right: auto
+		right: 0
 	}
 
 	.push-lg-12 {
@@ -914,7 +892,7 @@ th.visible-xs, td.visible-xs {
 	}
 
 	.push-lg-0 {
-		left: auto
+		left: 0
 	}
 
 	.pull-lg-left {

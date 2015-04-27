@@ -1,36 +1,13 @@
-:root {
-	--gutter: .875rem;
-}
-
-@-ms-viewport {
-	width: device-width;
-}
-
-body {
-	margin: 0;
-}
-
-.container,
-.container-fluid {
-	@mixin clearfix;
-	box-sizing: border-box;
-	padding-left: var(--gutter);
-	padding-right: var(--gutter);
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .row {
 	font-size: 0;
 	margin-left: -var(--gutter);
 	margin-right: -var(--gutter);
 }
 
-.col-xs, .col-sm, .col-md, .col-lg {
+.col, .col-sm, .col-md, .col-lg {
 	&-0, &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12 {
 		display: inline-block;
 		vertical-align: top;
-		text-align: left;
 		font-size: 1rem;
 		width: 100%;
 		padding-left: var(--gutter);
@@ -41,55 +18,55 @@ body {
 	}
 }
 
-@define-mixin grid $size {
-	.col-$(size) {
-		@mixin grid-item width;
+@define-mixin grid $suffix {
+	.col$(suffix) {
+		@for $i from 12 to 1 {
+			&-$i {
+				width: calc($i / 12 * 100%);
+			}
+		}
 
 		&-0 {
 			width: auto;
 		}
 	}
 
-	.pull-$(size) {
-		@mixin grid-item right;
+	.pull$(suffix) {
+		@for $i from 12 to 1 {
+			&-$i {
+				right: calc($i / 12 * 100%);
+			}
+		}
 
 		&-0 {
-			right: auto;
+			right: 0;
 		}
 	}
 
-	.push-$(size) {
-		@mixin grid-item left;
+	.push$(suffix) {
+		@for $i from 12 to 1 {
+			&-$i {
+				left: calc($i / 12 * 100%);
+			}
+		}
 
 		&-0 {
-			left: auto;
+			left: 0;
 		}
 	}
 }
 
-@mixin grid xs;
+@mixin grid;
 
-@media (min-width: 768px) {
-	.container {
-		width: 750px;
-	}
-
-	@mixin grid sm;
+@media (--sm) {
+	@mixin grid -sm;
 }
 
-@media (min-width: 992px) {
-	.container {
-		width: 970px;
-	}
-
-	@mixin grid md;
+@media (--md) {
+	@mixin grid -md;
 }
 
-@media (min-width: 1200px) {
-	.container {
-		width: 1170px;
-	}
-
-	@mixin grid lg;
+@media (--lg) {
+	@mixin grid -lg;
 }
 

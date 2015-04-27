@@ -1,38 +1,41 @@
 @define-mixin pull $size {
-	.pull$(size)left {
-		float: left;
-	}
+	.pull$(size) {
+		&-left {
+			float: left;
+		}
 
-	.pull$(size)right {
-		float: right;
-	}
+		&-right {
+			float: right;
+		}
 
-	.pull$(size)center {
-		display: block;
-		float: none;
-		margin-right: auto;
-		margin-left: auto;
+		&-center {
+			display: block;
+			float: none;
+			margin-right: auto;
+			margin-left: auto;
+		}
 	}
 }
 
 @define-mixin text $size {
-	.text$(size)left {
-		text-align: left;
-	}
+	.text$(size) {
+		&-left {
+			text-align: left;
+		}
 
-	.text$(size)right {
-		text-align: right;
-	}
+		&-right {
+			text-align: right;
+		}
 
-	.text$(size)center {
-		text-align: center;
+		&-center {
+			text-align: center;
+		}
 	}
 }
 
-@mixin pull -;
-@mixin pull -xs-;
-@mixin text -;
-@mixin text -xs-;
+.clearfix {
+	@mixin clearfix;
+}
 
 .text{
 	&-middle {
@@ -44,17 +47,20 @@
 	}
 }
 
-@media (min-width: 768px) {
-	@mixin pull -sm-;
-	@mixin text -sm-;
+@mixin pull;
+@mixin text;
+
+@media (--sm) {
+	@mixin pull -sm;
+	@mixin text -sm;
 }
 
-@media (min-width: 992px) {
-	@mixin pull -md-;
-	@mixin text -md-;
+@media (--md) {
+	@mixin pull -md;
+	@mixin text -md;
 }
 
-@media (min-width: 1200px) {
-	@mixin pull -lg-;
-	@mixin text -lg-;
+@media (--lg) {
+	@mixin pull -lg;
+	@mixin text -lg;
 }

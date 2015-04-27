@@ -1,0 +1,35 @@
+@-ms-viewport {
+	width: device-width;
+}
+
+body {
+	margin: 0;
+}
+
+.container,
+.container-fluid {
+	@mixin clearfix;
+	box-sizing: border-box;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (--sm) {
+	.container {
+		width: 750px;
+	}
+}
+
+@media (--md) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media (--lg) {
+	.container {
+		width: 1170px;
+	}
+}

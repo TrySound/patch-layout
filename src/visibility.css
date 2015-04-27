@@ -24,15 +24,15 @@
 	}
 }
 
-.visible-xs {
+.visible {
 	@mixin show;
 }
 
-.hidden-xs {
+.hidden {
 	@mixin hide;
 }
 
-@media (min-width: 768px) {
+@media (--sm) {
 	.visible-sm {
 		@mixin show;
 	}
@@ -42,7 +42,7 @@
 	}
 }
 
-@media (min-width: 992px) {
+@media (--md) {
 	.visible-md {
 		@mixin show;
 	}
@@ -52,7 +52,7 @@
 	}
 }
 
-@media (min-width: 1200px) {
+@media (--lg) {
 	.visible-lg {
 		@mixin show;
 	}
