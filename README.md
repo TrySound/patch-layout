@@ -1,5 +1,5 @@
 # patch-layout
-Bootstrap like Layout System
+Inline layout system
 
 ##Why
 
@@ -11,7 +11,7 @@ Bootstrap like Layout System
 
 ##Media Queries
 
-- **xs** - to 767px
+- none - to 767px
 - **sm** - 768px to 991px
 - **md** - 992px to 1199px
 - **lg** - 1200px and greater
@@ -26,59 +26,46 @@ Bootstrap like Layout System
 
 `n` is 1-12 column width/offset indent
 
-- `.col-xs-n` - `.offset-xs-n`
+- `.col-n` - `.offset-n`
 - `.col-sm-n` - `.offset-sm-n`
 - `.col-md-n` - `.offset-md-n`
 - `.col-lg-n` - `.offset-lg-n`
 
 By default columns vertically aligned to top. These classes will make you happy ;-)
 
-- `.col-middle`
-- `.col-bottom`
+- `.text-middle`
+- `.text-bottom`
 
 Or positioned columns inside row with
 
-- `.row-center`
-- `.row-right`
+- `.text-left` - `.text-center` - `.text-right`
+- `.text-sm-left` - `.text-sm-center` - `.text-sm-right`
+- `.text-md-left` - `.text-md-center` - `.text-md-right`
+- `.text-lg-left` - `.text-lg-center` - `.text-lg-right`
 
 ###Relative move
 
 Push - to left, pull - to right
 
-- `.push-xs-n` - `.pull-xs-n`
+- `.push-n` - `.pull-n`
 - `.push-sm-n` - `.pull-sm-n`
 - `.push-md-n` - `.pull-md-n`
 - `.push-lg-n` - `.pull-lg-n`
 
 ##Visibility
 
-- `.visible, .visible-inline` - show
-- `.hidden` - collapse
-- `.invisible` - hidden but not collapsed
-
-###Media queries
-
-- `.visible-xs` - `.hidden-xs`
-- `.visible-sm` - `.hidden-sm`
-- `.visible-md` - `.hidden-md`
-- `.visible-lg` - `.hidden-lg`
-
-###Inline-block
-
-- `.visible-xs-inline` - `.hidden-xs-inline`
-- `.visible-sm-inline` - `.hidden-sm-inline`
-- `.visible-md-inline` - `.hidden-md-inline`
-- `.visible-lg-inline` - `.hidden-lg-inline`
+- `.visible-inline` - `.visible` - `.hidden`
+- `.visible-sm-inline` - `.visible-sm` - `.hidden-sm`
+- `.visible-md-inline` - `.visible-md` - `.hidden-md`
+- `.visible-lg-inline` - `.visible-lg` - `.hidden-lg`
 
 ##Flow Align
 
-Could be used with columns
+- `.pull-left` - `.pull-center` - `.pull-right`
+- `.pull-sm-left` - `.pull-sm-center` - `.pull-sm-right`
+- `.pull-md-left` - `.pull-md-center` - `.pull-md-right`
+- `.pull-lg-left` - `.pull-lg-center` - `.pull-lg-right`
 
-- `.pull-left`
-- `.pull-center`
-- `.pull-right`
-
-##Clearfix
 - `.clearfix`
 
 ##Responsive Media
