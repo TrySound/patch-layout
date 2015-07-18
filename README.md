@@ -26,10 +26,10 @@ Inline layout system
 
 `n` is 1-12 column width/offset indent
 
-- `.col-n` - `.offset-n`
-- `.col-sm-n` - `.offset-sm-n`
-- `.col-md-n` - `.offset-md-n`
-- `.col-lg-n` - `.offset-lg-n`
+- `.col-n`
+- `.col-sm-n`
+- `.col-md-n`
+- `.col-lg-n`
 
 By default columns vertically aligned to top. These classes will make you happy ;-)
 
