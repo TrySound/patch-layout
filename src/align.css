@@ -34,7 +34,7 @@
 }
 
 .clearfix {
-	@mixin clearfix;
+	clear: fix;
 }
 
 .text{
@@ -50,17 +50,17 @@
 @mixin pull;
 @mixin text;
 
-@media (--sm) {
+@media ($viewport-sm) {
 	@mixin pull -sm;
 	@mixin text -sm;
 }
 
-@media (--md) {
+@media ($viewport-md) {
 	@mixin pull -md;
 	@mixin text -md;
 }
 
-@media (--lg) {
+@media ($viewport-lg) {
 	@mixin pull -lg;
 	@mixin text -lg;
 }

@@ -1,7 +1,10 @@
-var gulp = require('gulp'),
-	$ = require('gulp-load-plugins')(),
-	p = require('postcss-load-plugins')(),
-	template = ['/*!',
+var readFile = require('fs').readFileSync;
+var gulp = require('gulp');
+var postcss = require('gulp-postcss');
+var header = require('gulp-header');
+var rename = require('gulp-rename');
+var pkg = JSON.parse(readFile('package.json', 'utf-8'));
+var template = ['/*!',
 				' * <%= name %> <%= version %>',
 				' * <%= description %>',
 				' * <%= homepage %>',
@@ -10,38 +13,23 @@ var gulp = require('gulp'),
 				' * Copyright (c) <%= new Date().getFullYear() %>, <%= author %>',
 				' */\n\n'].join('\n');
 
-gulp.task('default', function () {
-	var pkg = JSON.parse(require('fs').readFileSync('package.json', 'utf-8'));
-
+gulp.task('default', function (done) {
 	return gulp.src([
-			'src/params.css',
-			'src/responsive.css',
-			'src/container.css',
-			'src/grid.css',
-			'src/align.css',
-			'src/visibility.css'
+			'src/' + pkg.name + '.css'
 		])
-		.pipe($.concat(pkg.name + '.css'))
-		.pipe($.postcss([
-			p.for(),
-			p.mixins(),
-			p.customMedia(),
-			p.customProperties(),
-			p.nested,
-			// Bootstrap non-conflict version
-			// p.pixrem('16px', {replace: true }),
-			p.calc(),
-			p.mqpacker()
+		.pipe(postcss([
+			require('precss'),
+			require('postcss-calc'),
+			require('postcss-clearfix')
 		]))
-		.pipe($.header(template, pkg))
+		.on('error', done)
+		.pipe(header(template, pkg))
 		.pipe(gulp.dest('dist'))
-		.pipe($.postcss([
-			require('csswring')()
+		.pipe(postcss([
+			require('cssnano'),
+			require('css-mqpacker')
 		]))
-		.pipe($.rename({suffix: '.min'}))
+		.on('error', done)
+		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('dist'));
-});
-
-gulp.task('dev', ['default'], function () {
-	gulp.watch('src/**/*.css', ['default']);
 });

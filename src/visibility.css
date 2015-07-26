@@ -32,7 +32,7 @@
 	@mixin hide;
 }
 
-@media (--sm) {
+@media ($viewport-sm) {
 	.visible-sm {
 		@mixin show;
 	}
@@ -42,7 +42,7 @@
 	}
 }
 
-@media (--md) {
+@media ($viewport-md) {
 	.visible-md {
 		@mixin show;
 	}
@@ -52,7 +52,7 @@
 	}
 }
 
-@media (--lg) {
+@media ($viewport-lg) {
 	.visible-lg {
 		@mixin show;
 	}
