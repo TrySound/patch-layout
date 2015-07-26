@@ -1,7 +1,7 @@
 # patch-layout
 Inline layout system
 
-##Why
+## Why
 
 - Columns use inline document flow
 - Columns could be aligned vertically!
@@ -9,20 +9,30 @@ Inline layout system
 - Fixed bootstrap visibility utils for mobile first
 - Default screen ratio (16by9) for embed content
 
-##Media Queries
+## Install
+
+```
+bower i patch-layout -S
+```
+
+```
+npm i patch-layout -S
+```
+
+## Media Queries
 
 - none - to 767px
 - **sm** - 768px to 991px
 - **md** - 992px to 1199px
 - **lg** - 1200px and greater
 
-##Grid
+## Grid
 
 - `.container`
 - `.container-fluid`
 - `.row`
 
-###Columns
+### Columns
 
 `n` is 1-12 column width/offset indent
 
@@ -43,7 +53,7 @@ Or positioned columns inside row with
 - `.text-md-left` - `.text-md-center` - `.text-md-right`
 - `.text-lg-left` - `.text-lg-center` - `.text-lg-right`
 
-###Relative move
+### Relative move
 
 Push - to left, pull - to right
 
@@ -52,14 +62,14 @@ Push - to left, pull - to right
 - `.push-md-n` - `.pull-md-n`
 - `.push-lg-n` - `.pull-lg-n`
 
-##Visibility
+## Visibility
 
 - `.visible-inline` - `.visible` - `.hidden`
 - `.visible-sm-inline` - `.visible-sm` - `.hidden-sm`
 - `.visible-md-inline` - `.visible-md` - `.hidden-md`
 - `.visible-lg-inline` - `.visible-lg` - `.hidden-lg`
 
-##Flow Align
+## Flow Align
 
 - `.pull-left` - `.pull-center` - `.pull-right`
 - `.pull-sm-left` - `.pull-sm-center` - `.pull-sm-right`
@@ -68,14 +78,14 @@ Push - to left, pull - to right
 
 - `.clearfix`
 
-##Responsive Media
+## Responsive Media
 
 - `.embed-responsive` - wrapper. By default 16by9
 - `.embed-responsive-4by3` - modificator for `.embed-responsive`
 - `iframe, embed, object, video` and `.embed-responsive-item` - child
 - `.img-responsive`
 
-##License
+## License
 
 [The MIT License (MIT)](LICENSE)
 
