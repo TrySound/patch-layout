@@ -1,15 +1,15 @@
 .grid {
 	font-size: 0;
-	margin-left: -$gutter;
-	margin-right: -$gutter;
+	margin-left: -var(--gutter);
+	margin-right: -var(--gutter);
 }
 
 .grid__cell {
 	display: inline-block;
 	vertical-align: top;
 	box-sizing: border-box;
-	padding-left: $gutter;
-	padding-right: $gutter;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
 	width: 100%;
 	position: relative;
 	font-size: 1rem;

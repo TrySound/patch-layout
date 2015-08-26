@@ -24,15 +24,14 @@
   },
   "homepage": "https://github.com/TrySound/patch-layout",
   "devDependencies": {
-    "css-mqpacker": "^3.1.0",
-    "cssnano": "^2.1.0",
     "gulp": "^3.9.0",
     "gulp-header": "^1.2.2",
-    "gulp-postcss": "^5.1.10",
-    "gulp-rename": "^1.2.2",
-    "postcss": "^4.1.16",
-    "postcss-calc": "^4.1.0",
-    "postcss-clearfix": "0.1.3",
-    "precss": "^0.3.0"
+    "gulp-postcss": "^6.0.0",
+    "postcss": "^5.0.2",
+    "postcss-calc": "^5.0.0",
+    "postcss-clearfix": "^0.2.0",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-import": "^7.0.0",
+    "postcss-nested": "^1.0.0"
   }
 }

@@ -1,4 +1,6 @@
-$gutter: 1rem;
+:root {
+	--gutter: 1rem;
+}
 
 @import 'container';
 

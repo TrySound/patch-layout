@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var plugin = require('postcss').plugin;
 var header = require('gulp-header');
-var rename = require('gulp-rename');
 var pkg = JSON.parse(readFile('package.json', 'utf-8'));
 var template = ['/*!',
 				' * <%= name %> <%= version %>',
@@ -17,12 +16,14 @@ gulp.task('default', function (done) {
 			'src/' + pkg.name + '.css'
 		])
 		.pipe(postcss([
-			require('precss'),
-			require('postcss-calc'),
+			require('postcss-import'),
+			require('postcss-nested'),
 			require('postcss-clearfix'),
+			require('postcss-custom-properties'),
+			require('postcss-calc'),
 			plugin('postcss-selector-fmt', function () {
 				return function (css) {
-					css.eachRule(function (rule) {
+					css.walkRules(function (rule) {
 						rule.selector = rule.selectors.join(',\n');
 					});
 				};
