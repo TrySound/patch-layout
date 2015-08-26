@@ -5,7 +5,7 @@ Inline layout system
 
 - Columns use inline document flow
 - Columns could be aligned vertically!
-- `.push-xs-n, .pull-sm-n, .offset-md-n` for shorter markup
+- `.push-xs-n, .pull-sm-n` for shorter markup
 - Fixed bootstrap visibility utils for mobile first
 - Default screen ratio (16by9) for embed content
 
