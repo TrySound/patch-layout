@@ -22,11 +22,11 @@ npm i patch-layout -S
 
 ## Media Queries
 
-- **xs** - to 544px
-- **sm** - 545px to 767px
-- **md** - 768px to 991px
-- **lg** - 992px to 1199px
-- **xl** - 1200px and greater
+- `xs` - to 544px
+- `sm` - 545px to 767px
+- `md` - 768px to 991px
+- `lg` - 992px to 1199px
+- `xl` - 1200px and greater
 
 ## Grid
 
@@ -57,7 +57,7 @@ Push - to left, pull - to right
 - `.embed-responsive--4by3`
 - `.embed-responsive--16by9`
 - `.embed-responsive--21by9`
-- `iframe, embed, object, video` and `.embed-responsive-item` - child
+- `iframe`, `embed`, `object`, `video` and `.embed-responsive-item` are children
 - `.img-responsive`
 
 ## License
