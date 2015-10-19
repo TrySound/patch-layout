@@ -28,10 +28,11 @@
     "gulp-header": "^1.2.2",
     "gulp-postcss": "^6.0.0",
     "postcss": "^5.0.2",
+    "postcss-advanced-variables": "^1.1.0",
     "postcss-calc": "^5.0.0",
     "postcss-clearfix": "^0.2.0",
-    "postcss-custom-properties": "^5.0.0",
     "postcss-import": "^7.0.0",
+    "postcss-mixins": "^2.1.0",
     "postcss-nested": "^1.0.0"
   }
 }

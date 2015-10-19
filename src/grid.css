@@ -1,16 +1,77 @@
-.grid {
+.row {
 	font-size: 0;
-	margin-left: -var(--gutter);
-	margin-right: -var(--gutter);
+	margin-left: -$gutter;
+	margin-right: -$gutter;
 }
 
-.grid__cell {
-	display: inline-block;
-	vertical-align: top;
-	box-sizing: border-box;
-	padding-left: var(--gutter);
-	padding-right: var(--gutter);
-	width: 100%;
-	position: relative;
-	font-size: 1rem;
+$column-count: 12;
+
+.col-xs, .col-sm, .col-md, .col-lg {
+	&-0, &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12 {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 1rem;
+		width: 100%;
+		padding-left: $gutter;
+		padding-right: $gutter;
+		box-sizing: border-box;
+		position: relative;
+		min-height: 1px;
+	}
+}
+
+@define-mixin grid $suffix {
+	.col$(suffix) {
+		@for $i from $column-count to 1 {
+			&-$i {
+				width: calc($i / $column-count * 100%);
+			}
+		}
+
+		&-0 {
+			width: auto;
+		}
+	}
+
+	.pull$(suffix) {
+		@for $i from $column-count to 1 {
+			&-$i {
+				right: calc($i / $column-count * 100%);
+			}
+		}
+
+		&-0 {
+			right: 0;
+		}
+	}
+
+	.push$(suffix) {
+		@for $i from $column-count to 1 {
+			&-$i {
+				left: calc($i / $column-count * 100%);
+			}
+		}
+
+		&-0 {
+			left: 0;
+		}
+	}
+}
+
+@mixin grid -xs;
+
+@media ($viewport-sm) {
+	@mixin grid -sm;
+}
+
+@media ($viewport-md) {
+	@mixin grid -md;
+}
+
+@media ($viewport-lg) {
+	@mixin grid -lg;
+}
+
+@media ($viewport-xl) {
+	@mixin grid -xl;
 }

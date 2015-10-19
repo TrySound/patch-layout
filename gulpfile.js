@@ -17,9 +17,10 @@ gulp.task('default', function (done) {
 		])
 		.pipe(postcss([
 			require('postcss-import'),
+			require('postcss-mixins'),
+			require('postcss-advanced-variables'),
 			require('postcss-nested'),
 			require('postcss-clearfix'),
-			require('postcss-custom-properties'),
 			require('postcss-calc'),
 			plugin('postcss-selector-fmt', function () {
 				return function (css) {
