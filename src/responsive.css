@@ -5,14 +5,14 @@
 	padding: 0;
 	overflow: hidden;
 
-	&--16by9:before,
-	&:before {
+	&,
+	&--16by9 {
 		content: '';
 		display: block;
 		padding-bottom: calc(9 * 100% / 16);
 	}
 
-	&--4by3:before {
+	&--4by3 {
 		padding-bottom: calc(3 * 100% / 4);
 	}
 

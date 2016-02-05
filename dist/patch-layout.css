@@ -1,7 +1,7 @@
 /*!
- * patch-layout 3.0.0
+ * patch-layout 3.0.1
  * https://github.com/TrySound/patch-layout
- * Copyright 2015 Bogdan Chadkin <trysound@yandex.ru>
+ * Copyright 2016 Bogdan Chadkin <trysound@yandex.ru>
  */
 
 @-webkit-viewport {
@@ -747,14 +747,14 @@
 	overflow: hidden;
 }
 
-.embed-responsive--16by9:before,
-.embed-responsive:before {
+.embed-responsive,
+.embed-responsive--16by9 {
 	content: '';
 	display: block;
 	padding-bottom: 56.25%;
 }
 
-.embed-responsive--4by3:before {
+.embed-responsive--4by3 {
 	padding-bottom: 75%;
 }
 

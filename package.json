@@ -1,6 +1,6 @@
 {
   "name": "patch-layout",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Inline layout system",
   "main": "dist/patch-layout.css",
   "scripts": {
